@@ -1,6 +1,6 @@
-package aplicacao;
-
 import java.util.Scanner;
+
+import aplicacao.PerformanceTester;
 
 public class App {
     public static void main(String[] args) throws Exception {

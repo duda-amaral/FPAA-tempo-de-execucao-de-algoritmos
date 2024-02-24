@@ -34,7 +34,7 @@ public class PerformanceTester {
         long fim = System.nanoTime();
 
         System.out.println("P = " + P + "\nN = " + N);
-        calcularTempo(ini, fim);
+        calcularTempo(ini, fim, P, N);
     }
 
     public static void testHashMap(int P, int N) throws InvalidAttributeValueException {
@@ -54,14 +54,14 @@ public class PerformanceTester {
 
         long fim = System.nanoTime();
 
-        System.out.println("P = " + P + "\nN = " + N);
-        calcularTempo(ini, fim);
+        calcularTempo(ini, fim, P, N);
 
     }
 
-    public static void calcularTempo(Long ini, Long fim) {
+    public static void calcularTempo(Long ini, Long fim, int P, int N) {
         double tempoMs = (fim - ini) / NANO_TO_MS;
         double tempoSeg = tempoMs / MS_TO_SEC;
+        System.out.println("P = " + P + "\nN = " + N);
         System.out.println("Finalizado em " + String.format("%.2f", tempoMs) + " ms ("
                 + String.format("%.4f", tempoSeg) + " segundos).");
     }
